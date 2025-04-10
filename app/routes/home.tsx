@@ -22,7 +22,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
   const products = loaderData;
 
   return (
-    <div>
+    <div className="container mx-auto">
       <h1>⚙️GoGear</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
