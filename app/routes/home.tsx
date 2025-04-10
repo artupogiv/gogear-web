@@ -38,7 +38,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             />
             <h2 className="text-xl font-bold">{product.name}</h2>
             <p className="text-gray-700">{product.description}</p>
-            <p className="text-gray-700">Price: ${product.price}</p>
+            <h3 className="text-gray-700 font-bold">Price: Rp {product.price}</h3>
           </div>
         ))}
       </div>
