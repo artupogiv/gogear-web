@@ -37,7 +37,7 @@ export default function ProductSlug({ loaderData }: Route.ComponentProps) {
         key={product.id}
         className="flex p-4 border border-gray-200 rounded-lg"
       >
-        <div className="aspect-square">
+        <div>
           <img
             src={product.imageUrl}
             alt={product.name}

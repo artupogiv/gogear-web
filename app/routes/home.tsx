@@ -25,7 +25,11 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-4xl font-bold py-8">⚙️GoGear</h1>
+      <div>
+        <Link to={`/`}>
+          <h1 className="text-4xl font-bold py-8">⚙️GoGear</h1>
+        </Link>
+      </div>
 
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {products.map((product) => {
