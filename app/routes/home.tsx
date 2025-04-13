@@ -43,7 +43,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                   <img
                     src={product.imageUrl}
                     alt={product.name}
-                    className="w-full h-auto"
+                    className="size-100 object-cover"
                   />
                   <h2 className="text-xl font-bold py-4">{product.name}</h2>
                   <p className="text-gray-700 py-4">{product.description}</p>

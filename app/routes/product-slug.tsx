@@ -3,13 +3,13 @@ import type { Product } from "~/modules/product/type";
 import { convertCurrencyToIDR } from "~/lib/currency";
 import { Link } from "react-router";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ data }: Route.MetaArgs) {
   return [
-    { title: "Product - GoGear" },
+    { title: `${data.name} | GoGear` },
     {
       name: "description",
       content:
-        "E-commerce personal project dedicated to support your tech experience",
+        `${data.description}`,
     },
   ];
 }
@@ -41,7 +41,7 @@ export default function ProductSlug({ loaderData }: Route.ComponentProps) {
           <img
             src={product.imageUrl}
             alt={product.name}
-            className="w-full h-full object-cover"
+            className="size-100 object-cover border border-gray-200 rounded-lg"
           />
         </div>
         <div className="p-4">
