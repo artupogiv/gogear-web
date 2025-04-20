@@ -3,7 +3,7 @@ import type { Route } from "./+types/home";
 import { convertCurrencyToIDR } from "~/lib/currency";
 import { Link } from "react-router";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
     { title: "GoGear" },
     {
@@ -14,7 +14,7 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export async function loader({}: Route.LoaderArgs) {
+export async function loader({ }: Route.LoaderArgs) {
   const response = await fetch(`${process.env.BACKEND_API_URL}/products`);
   const products: Products = await response.json();
   return products;
@@ -24,11 +24,28 @@ export default function Home({ loaderData }: Route.ComponentProps) {
   const products = loaderData;
 
   return (
-    <div className="container mx-auto">
-      <div>
+    <div className="container my-4 mx-auto">
+      <div className="flex flex-row items-center my-4 ">
         <Link to={`/`}>
-          <h1 className="text-4xl font-bold py-8">⚙️GoGear</h1>
+          <img src="/gogear-high-resolution-logo-transparent.png" alt="logo" className="w-1/8 object-cover rounded-lg" />
         </Link>
+        <div className="flex flex-row px-8">
+          <ul className="flex space-x-4">
+            <a href="/"><li>Home</li></a>
+            <a href="/products"><li>Product</li></a>
+            <a href="/about"><li>About</li></a>
+          </ul>
+        </div>
+        <div className="flex items-center flex-row space-x-2">
+        <div className="w-xs">
+          <input
+            type="text"
+            placeholder="search ..."
+            className="w-2xs p-2 border-2 border-orange-200 rounded-lg " />
+        </div>
+        <div><p>Cart</p></div>
+        <div><p>Account</p></div>
+        </div>
       </div>
 
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -38,7 +55,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               <Link to={`/products/${product.slug}`}>
                 <div
                   key={product.id}
-                  className="p-4 border border-gray-200 rounded-lg"
+                  className="p-4 border border-orange-200 rounded-lg"
                 >
                   <img
                     src={product.imageUrl}
