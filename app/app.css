@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -10,7 +11,7 @@
 
 html,
 body {
-  @apply bg-white ;
+  @apply bg-white;
 
   @media (prefers-color-scheme: white) {
     color-scheme: white;

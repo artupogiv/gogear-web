@@ -1,5 +1,5 @@
-import { Form, redirect } from "react-router";
 import type { Route } from "./+types/register";
+import { Form, redirect } from "react-router";
 import {
   Card,
   CardContent,
@@ -34,7 +34,9 @@ export async function action({ request }: Route.ActionArgs) {
     password,
   };
 
-  const response = await fetch(`${process.env.BACKEND_API_URL}/register`, {
+  console.log({ registerUserData });
+
+  const response = await fetch(`${process.env.BACKEND_API_URL}/auth/register`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
