@@ -46,7 +46,7 @@ export default function CartPage({ loaderData }: Route.ComponentProps) {
             <CardHeader className="pb-2">
               <div className="flex justify-between items-center">
                 <CardTitle className="text-lg">{item.product.name}</CardTitle>
-                <span className="text-lg font-black text-blue-300">
+                <span className="text-lg font-black text-gray-900">
                   {new Intl.NumberFormat("id-ID", {
                     style: "currency",
                     currency: "IDR",
@@ -63,11 +63,9 @@ export default function CartPage({ loaderData }: Route.ComponentProps) {
       </div>
       <div className="flex flex-col justify-end mt-4 ">
         <div className="flex justify-end text-xl">
-          <span className="font-black text-slate-600">Subtotal: </span>
+          <span className="font-black text-gray-900">Subtotal: </span>
         </div>
-        <Button className="bg-slate-600 text-white px-4 py-2 rounded-md hover:bg-slate-900">
-          Checkout
-        </Button>
+        <Button>Checkout</Button>
       </div>
     </div>
   );
