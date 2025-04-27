@@ -116,6 +116,13 @@ export default function LoginPage({ loaderData }: Route.ComponentProps) {
             <Button type="submit" className="w-full cursor-pointer">
               Login
             </Button>
+            <div className="space-y-2 ">
+              Don't have an account?{" "}
+              <a href="/register" className="text-bold underline">
+                {" "}
+                Register
+              </a>
+            </div>
           </Form>
         </CardContent>
       </Card>

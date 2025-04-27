@@ -1,7 +1,4 @@
-import { redirect } from "react-router";
-import type { Route } from "./+types/dashboard";
-import { destroySession, getSession } from "~/session-server";
-import type { User } from "~/modules/user/type";
+import type { Route } from "./+types/cart";
 
 export async function loader({ request }: Route.LoaderArgs) {
   const session = await getSession(request.headers.get("Cookie"));
@@ -31,14 +28,4 @@ export async function loader({ request }: Route.LoaderArgs) {
   console.info({ userData });
 
   return userData;
-}
-
-export default function DashboardPage({ loaderData }: Route.ComponentProps) {
-  return (
-    <div className="container mx-auto py-10">
-      <h1 className="text-3xl font-bold mb-8">Dashboard</h1>
-      <p>Hello, {loaderData.fullName}!</p>
-      {/* <pre>{JSON.stringify(loaderData, null, 2)}</pre> */}
-    </div>
-  );
 }
