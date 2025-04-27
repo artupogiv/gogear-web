@@ -63,7 +63,7 @@ export default function CartPage({ loaderData }: Route.ComponentProps) {
       </div>
       <div className="flex flex-col justify-end mt-4 ">
         <div className="flex justify-end text-xl">
-          <span className="font-black text-gray-900">Subtotal: </span>
+          <span className="font-black text-gray-900">Subtotal: {}</span>
         </div>
         <Button>Checkout</Button>
       </div>
