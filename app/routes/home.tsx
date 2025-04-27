@@ -25,45 +25,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
   const products = loaderData;
 
   return (
-    <div className="container my-4 mx-auto">
-      <div className="flex flex-row items-center my-4 ">
-        <Link to={`/`}>
-          <img
-            src="/gogear-high-resolution-logo-transparent.png"
-            alt="logo"
-            className="w-1/8 object-cover rounded-lg"
-          />
-        </Link>
-        <div className="flex flex-row px-8">
-          <ul className="flex space-x-4">
-            <a href="/">
-              <li>Home</li>
-            </a>
-            <a href="/products">
-              <li>Product</li>
-            </a>
-            <a href="/about">
-              <li>About</li>
-            </a>
-          </ul>
-        </div>
-        <div className="flex items-center flex-row space-x-2">
-          <div className="w-xs">
-            <input
-              type="text"
-              placeholder="search ..."
-              className="w-2xs p-2 border border-gray-600 rounded-lg "
-            />
-          </div>
-          <div>
-            <p>Cart</p>
-          </div>
-          <div>
-            <p>Account</p>
-          </div>
-        </div>
-      </div>
-
+    <div className="container mx-auto">
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
         {products.map((product) => {
           return (

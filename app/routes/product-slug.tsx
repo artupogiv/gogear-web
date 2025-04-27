@@ -26,24 +26,7 @@ export default function ProductSlug({ loaderData }: Route.ComponentProps) {
   const product = loaderData;
 
   return (
-    <div className="container my-4 mx-auto">
-      <div className="flex flex-row justify-between items-center my-4 ">
-        <Link to={`/`}>
-          <img
-            src="/gogear-high-resolution-logo-transparent.png"
-            alt="logo"
-            className="w-1/8 object-cover rounded-lg"
-          />
-        </Link>
-        <div className="w-1/2">
-          <input
-            type="text"
-            placeholder="search ..."
-            className="w-2xs p-2 border border-gray-600 rounded-lg "
-          />
-        </div>
-      </div>
-
+    <div className="container mx-auto">
       <div
         key={product.id}
         className="flex p-4 border border-gray-600 rounded-lg"
