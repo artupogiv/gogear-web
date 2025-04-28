@@ -16,7 +16,9 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export async function loader({}: Route.LoaderArgs) {
-  const response = await fetch(`${process.env.BACKEND_API_URL}/products`);
+  const response = await fetch(
+    `${process.env.BACKEND_API_URL}/collections/products`
+  );
   const products: Products = await response.json();
   return products;
 }

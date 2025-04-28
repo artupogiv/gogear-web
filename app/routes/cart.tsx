@@ -39,7 +39,7 @@ export default function CartPage({ loaderData }: Route.ComponentProps) {
   return (
     <div className="container mx-auto py-10">
       <h1 className="text-3xl font-bold mb-8">Shopping Cart</h1>
-      <pre>{JSON.stringify(loaderData, null, 2)}</pre>
+      {/* <pre>{JSON.stringify(loaderData, null, 2)}</pre> */}
       <div className="flex flex-col gap-4">
         {loaderData.items.map((item) => (
           <Card key={item.id}>
@@ -56,6 +56,12 @@ export default function CartPage({ loaderData }: Route.ComponentProps) {
               </div>
             </CardHeader>
             <CardContent className="text-sm">
+              <img
+                src={item.product.imageUrl}
+                alt={item.product.name}
+                width={115}
+                height={115}
+              />
               <p className="text-gray-600 text-lg">Quantity: {item.quantity}</p>
             </CardContent>
           </Card>

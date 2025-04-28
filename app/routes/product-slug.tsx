@@ -1,12 +1,12 @@
 import { Form, redirect } from "react-router";
-import type { Route } from "./+types/product-slug";
-import type { Product } from "~/modules/product/type";
+import { Button } from "~/components/ui/button";
+import { Input } from "~/components/ui/input";
 import { convertCurrencyToIDR } from "~/lib/currency";
 import { parseHtmlToReact } from "~/lib/html";
-import { Input } from "~/components/ui/input";
-import { Button } from "~/components/ui/button";
-import { destroySession, getSession } from "~/session-server";
 import type { AddCartItem } from "~/modules/cart/schema";
+import type { Product } from "~/modules/product/type";
+import { destroySession, getSession } from "~/session-server";
+import type { Route } from "./+types/product-slug";
 
 export function meta({ data }: Route.MetaArgs) {
   return [

@@ -10,7 +10,8 @@ export function Footer() {
               className="font-bold text-blue-700"
             >
               artupogiv
-            </a>{" "}
+            </a>
+            {". "}
             All rights reserved.
           </p>
         </div>

@@ -38,7 +38,7 @@ export function Header() {
                   to="/products"
                   className="text-gray-600 hover:text-shadow-gray-800 hover:underline transition-colors"
                 >
-                  Products
+                  Product
                 </Link>
               </li>
               <li>
